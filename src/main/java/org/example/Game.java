@@ -11,8 +11,6 @@ public class Game {
         User user1 = new User("Aruba");
         String name = user1.setNameFromInput();
 
-        System.out.println("Hi " + name + " Welcome to the game! Please tell me what you pick, is it Rock, Paper or Scissors?");
-
         ArrayList<String> rps = new ArrayList<>();
         rps.add("Rock");
         rps.add("Paper");
@@ -21,7 +19,7 @@ public class Game {
         String choice;
         String randomElement;
         do {
-
+            System.out.println("Hi " + name + " Welcome to the game! Please tell me what you pick, is it Rock, Paper or Scissors?");
             Scanner rpsOption = new Scanner(System.in);
             choice = rpsOption.nextLine();
 
@@ -52,7 +50,7 @@ public class Game {
                 System.out.println("Sorry please pick either Rock, Paper or Scissors!");
             }
 
-        } while (choice == randomElement);
+        } while (choice.equals(randomElement));
 
 
     }
